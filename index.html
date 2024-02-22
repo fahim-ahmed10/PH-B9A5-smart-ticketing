@@ -7,11 +7,15 @@
     <title>Smart Ticketing</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <!-- custom css-->
     <link rel="stylesheet" href="">
     <!-- daisyUI and Tailwind css CDN link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>    
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- To make custom css color -->
     <script>
         tailwind.config = {
@@ -20,14 +24,12 @@
                     colors: {
                         clifford: '#da373d',
                         'primary_clr': '#1dd100',
-                        'bg_hover': '#51db39',
+                        'border_clr': '#51db39',
                         'button_bg': '#e8fae5',
 
-                        
-                        
                     },
                     fontFamily: {
-                        'Manrope': ['Manrope', 'sans-serif']
+                        'inter': ['Inter', 'sans-serif']
                     }
                 }
             }
@@ -68,7 +70,8 @@
                     </ul>
                 </div>
                 <div class="navbar-end">
-                    <a class="btn text-[#1dd100] font-semibold text-lg bg-[#e8fae5] border-1 border-solid border-[#51db39] hover:bg-[#dcf3d8]">Bus 
+                    <a
+                        class="btn text-primary_clr font-semibold text-lg bg-[#e8fae5] border-1 border-solid border-[#51db39] hover:bg-[#dcf3d8]">Bus
                         <img src="./images/bus-icon.png" alt="bus-icon">
                     </a>
                 </div>
@@ -82,19 +85,52 @@
         <div class="hero rounded-3xl min-h-[550px]" style="background-image: url(./images/banner.png);">
             <div class="bg-opacity-60"></div>
             <div class="hero-content text-center text-neutral-content">
-              <div class="max-w-xl">
-                <h1 class="mb-5 text-5xl font-bold">End-to-End Travel with</h1>
-                <h1 class="mb-5 text-5xl font-bold text-[#1dd100]">P Paribahan</h1>
-                <p class="mb-5">An e-ticketing system is a digital solution that enables users to purchase tickets for various events, services, or modes of transportation online. </p>
-                <button class="btn bg-[#1dd100] border-none font-bold text-xl">Buy Tickets</button>
-              </div>
+                <div class="max-w-xl">
+                    <h1 class="mb-5 text-5xl font-bold">End-to-End Travel with</h1>
+                    <h1 class="mb-5 text-5xl font-bold text-[#1dd100]">P Paribahan</h1>
+                    <p class="mb-5">An e-ticketing system is a digital solution that enables users to purchase tickets
+                        for various events, services, or modes of transportation online. </p>
+                    <button class="btn bg-[#1dd100] border-none font-bold text-xl">Buy Tickets</button>
+                </div>
             </div>
-          </div>
+        </div>
     </section>
     <!-- Hero Section End -->
 
     <!-- Best Offer Section Start-->
-    
+    <section>
+        <div>
+            <h3 class="text-center mb-6 mt-10 font-bold text-3xl">Best offers for you</h3>
+            <div class="flex flex-col md:flex-row lg:flex-row justify-center gap-4">
+                <div class="flex rounded-xl items-center bg-[#ffbf0f] p-7 relative">
+                    <div class="bg-white absolute p-5 rounded-full inset-x-[49%] top-[-15%] md:inset-x-[54%] md:top-[-15%]"></div>
+                    <div class="border-r-2 border-white border-dashed pr-10 font-sans">
+                        <h1 class="font-extrabold text-xl">15% OFF</h1>
+                        <p class="font-medium text-sm">on your next purchase</p>
+                        <p class="font-normal text-xs text-slate-600">use by January 2024</p>
+                    </div>
+                    <div class="bg-white absolute p-5 rounded-full inset-x-[49%] bottom-[-15%] md:inset-x-[54%] md:bottom-[-15%]"></div>
+                    <div class="pl-10 font-serif">
+                        <h1 class="font-bold text-lg">NEW<span>15</span></h1>
+                        <p class="font-normal text-xs text-slate-600">Coupon Code</p>
+                    </div>
+                </div>
+                <div class="flex rounded-xl items-center bg-[#f78c9c] p-7 relative">
+                    <div class="bg-white absolute p-5 rounded-full right-[40%] top-[-14%] md:right-[37.5%] md:top-[-14%]"></div>
+                    <div class="border-r-2 border-white border-dashed pr-10 font-sans">
+                        <h1 class="font-extrabold text-xl">20% OFF</h1>
+                        <p class="font-medium text-sm">on your next purchase</p>
+                        <p class="font-normal text-xs text-slate-600">use by January 2024</p>
+                    </div>
+                    <div class="bg-white absolute p-5 rounded-full right-[40%] bottom-[-14%] md:right-[37.5%] md:bottom-[-14%]"></div>
+                    <div class="pl-10 font-sans">
+                        <h1 class="font-bold text-lg">Couple 20</h1>
+                        <p class="font-normal text-xs text-slate-600">Coupon Code</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Best Offer Section End-->
 
     <script src="" async defer></script>
