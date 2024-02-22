@@ -1,16 +1,103 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Smart Ticketing</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        Hello World!
-        
-        <script src="" async defer></script>
-    </body>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Smart Ticketing</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- custom css-->
+    <link rel="stylesheet" href="">
+    <!-- daisyUI and Tailwind css CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>    
+    <!-- To make custom css color -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'primary_clr': '#1dd100',
+                        'bg_hover': '#51db39',
+                        'button_bg': '#e8fae5',
+
+                        
+                        
+                    },
+                    fontFamily: {
+                        'Manrope': ['Manrope', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="max-w-sm md:max-w-screen-md lg:max-w-screen-lg m-auto">
+    <!-- Header Start -->
+    <header>
+        <nav>
+            <div class="navbar bg-base-100 p-0">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden pl-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Destination</a></li>
+                            <li><a>Search</a></li>
+                        </ul>
+                    </div>
+                    <a class="text-xl font-bold p-0">P-Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn text-[#1dd100] font-semibold text-lg bg-[#e8fae5] border-1 border-solid border-[#51db39] hover:bg-[#dcf3d8]">Bus 
+                        <img src="./images/bus-icon.png" alt="bus-icon">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Section Start -->
+    <section>
+        <div class="hero rounded-3xl min-h-[550px]" style="background-image: url(./images/banner.png);">
+            <div class="bg-opacity-60"></div>
+            <div class="hero-content text-center text-neutral-content">
+              <div class="max-w-xl">
+                <h1 class="mb-5 text-5xl font-bold">End-to-End Travel with</h1>
+                <h1 class="mb-5 text-5xl font-bold text-[#1dd100]">P Paribahan</h1>
+                <p class="mb-5">An e-ticketing system is a digital solution that enables users to purchase tickets for various events, services, or modes of transportation online. </p>
+                <button class="btn bg-[#1dd100] border-none font-bold text-xl">Buy Tickets</button>
+              </div>
+            </div>
+          </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Best Offer Section Start-->
+    
+    <!-- Best Offer Section End-->
+
+    <script src="" async defer></script>
+</body>
+
 </html>
