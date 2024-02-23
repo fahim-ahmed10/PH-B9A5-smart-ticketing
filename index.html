@@ -207,7 +207,8 @@
             </div>
             <div
                 class="max-w-sm md:max-w-screen-md lg:max-w-screen-lg m-auto p-7 w-[100%] flex flex-col gap-6 md:flex-row lg:flex-row bg-white mt-6 rounded-xl">
-                <div class="border-none md:border-r-2 lg:border-r-2 border-[#d7d7d7] md:border-dashed lg:border-dashed md:pr-10 lg:pr-10 w-[100%] md:w-[60%] lg:w-[60%] flex flex-col gap-4">
+                <div
+                    class="border-none md:border-r-2 lg:border-r-2 border-[#d7d7d7] md:border-dashed lg:border-dashed md:pr-10 lg:pr-10 w-[100%] md:w-[60%] lg:w-[60%] flex flex-col gap-4">
                     <h1 class="font-medium">Select Your Seat</h1>
                     <hr class="border-dashed">
                     <div class="flex justify-between">
@@ -297,9 +298,52 @@
                         <div><button class="btn px-4 md:px-5 lg:px-8 text-slate-500">J4</button></div>
                     </div>
                 </div>
-                <div class="w-[100%] md:w-[40%] lg:w-[40%]">
+                <div class="w-[100%] md:w-[40%] lg:w-[40%] flex flex-col gap-4">
                     <h1 class="font-medium">Select Your Seat</h1>
                     <hr class="border-dashed">
+                    <div class="bg-[#f7f8f8] p-5 rounded-2xl">
+                        <div class="flex justify-between mb-2">
+                            <h1 class="font-medium">Seat <span class="bg-primary_clr rounded-full px-2 text-xs">2</span></h1>
+                            <h1 class="font-medium">Class</h1>
+                            <h1 class="font-medium">Price</h1>
+                        </div>
+                        <hr class="border-dashed mb-2">
+                        <div class="flex justify-between">
+                            <h2 class="text-slate-500">C2</h2>
+                            <h2 class="text-slate-500">Economy</h2>
+                            <h2 class="text-slate-500">550</h2>
+                        </div>
+                        <div class="flex justify-between">
+                            <h2 class="text-slate-500">C2</h2>
+                            <h2 class="text-slate-500">Economy</h2>
+                            <h2 class="text-slate-500">550</h2>
+                        </div>
+                        <hr class="my-3">
+                        <div class="flex justify-between">
+                            <h1 class="font-medium">Total Price</h1>
+                            <h1 class="font-medium">BDT <span>1100</span></h1>
+                        </div>
+                        <div class="mt-3 relative">
+                            <input class="w-full p-3 rounded-lg text-xs outline-slate-200" type="text" placeholder="Have any Coupon?">
+                            <button class="absolute right-1 text-sm text-white top-1 rounded-lg bg-primary_clr px-3 py-1">Apply</button>
+                        </div>
+                        <div class="flex justify-between mt-3">
+                            <h1 class="font-medium">Grand Total</h1>
+                            <h1 class="font-medium">BDT <span>1100</span></h1>
+                        </div>
+                    </div>
+                    <h1 class="font-medium">Passenger Name*</h1>
+                    <input class="p-3 border-[1px] text-sm border-slate-200 rounded-lg outline-slate-300" type="text" placeholder="Enter your name">
+                    <h1 class="font-medium">Phone Number*</h1>
+                    <input class="p-3 border-[1px] text-sm border-slate-200 rounded-lg outline-slate-300" type="number" placeholder="Enter your phone number">
+                    <h1 class="font-medium">Email ID</h1>
+                    <input class="p-3 border-[1px] text-sm border-slate-200 rounded-lg outline-slate-300" type="email" placeholder="Enter Your email id">
+                    <button class="w-full bg-primary_clr rounded-xl p-3 text-white font-medium">Next</button>
+                    <div class="flex gap-2 justify-center">
+                        <h1 class="text-sm text-slate-500 underline">Terms and Conditions</h1>
+                        <h1 class="text-sm text-slate-500 underline">Cancellation Policy</h1>
+                    </div>
+
                 </div>
             </div>
         </div>
