@@ -37,9 +37,9 @@
     </script>
 </head>
 
-<body class="max-w-sm md:max-w-screen-md lg:max-w-screen-lg m-auto">
+<body>
     <!-- Header Start -->
-    <header>
+    <header class="max-w-sm md:max-w-screen-md lg:max-w-screen-lg m-auto">
         <nav>
             <div class="navbar bg-base-100 p-0">
                 <div class="navbar-start">
@@ -81,7 +81,7 @@
     <!-- Header End -->
 
     <!-- Hero Section Start -->
-    <section>
+    <section class="max-w-sm md:max-w-screen-md lg:max-w-screen-lg m-auto">
         <div class="hero rounded-3xl min-h-[550px]" style="background-image: url(./images/banner.png);">
             <div class="bg-opacity-60"></div>
             <div class="hero-content text-center text-neutral-content">
@@ -98,40 +98,114 @@
     <!-- Hero Section End -->
 
     <!-- Best Offer Section Start-->
-    <section>
+    <section class="max-w-sm md:max-w-screen-md lg:max-w-screen-lg m-auto">
         <div>
             <h3 class="text-center mb-6 mt-10 font-bold text-3xl">Best offers for you</h3>
             <div class="flex flex-col md:flex-row lg:flex-row justify-center gap-4">
                 <div class="flex rounded-xl items-center bg-[#ffbf0f] p-7 relative">
-                    <div class="bg-white absolute p-5 rounded-full inset-x-[49%] top-[-15%] md:inset-x-[54%] md:top-[-15%]"></div>
+                    <div
+                        class="bg-white absolute p-5 rounded-full inset-x-[49%] top-[-15%] md:inset-x-[54%] md:top-[-15%]">
+                    </div>
                     <div class="border-r-2 border-white border-dashed pr-10 font-sans">
                         <h1 class="font-extrabold text-xl">15% OFF</h1>
                         <p class="font-medium text-sm">on your next purchase</p>
                         <p class="font-normal text-xs text-slate-600">use by January 2024</p>
                     </div>
-                    <div class="bg-white absolute p-5 rounded-full inset-x-[49%] bottom-[-15%] md:inset-x-[54%] md:bottom-[-15%]"></div>
+                    <div
+                        class="bg-white absolute p-5 rounded-full inset-x-[49%] bottom-[-15%] md:inset-x-[54%] md:bottom-[-15%]">
+                    </div>
                     <div class="pl-10 font-serif">
                         <h1 class="font-bold text-lg">NEW<span>15</span></h1>
                         <p class="font-normal text-xs text-slate-600">Coupon Code</p>
                     </div>
                 </div>
                 <div class="flex rounded-xl items-center bg-[#f78c9c] p-7 relative">
-                    <div class="bg-white absolute p-5 rounded-full right-[40%] top-[-14%] md:right-[37.5%] md:top-[-14%]"></div>
+                    <div
+                        class="bg-white absolute p-5 rounded-full right-[40%] top-[-14%] md:right-[37.5%] md:top-[-14%]">
+                    </div>
                     <div class="border-r-2 border-white border-dashed pr-10 font-sans">
                         <h1 class="font-extrabold text-xl">20% OFF</h1>
                         <p class="font-medium text-sm">on your next purchase</p>
                         <p class="font-normal text-xs text-slate-600">use by January 2024</p>
                     </div>
-                    <div class="bg-white absolute p-5 rounded-full right-[40%] bottom-[-14%] md:right-[37.5%] md:bottom-[-14%]"></div>
+                    <div
+                        class="bg-white absolute p-5 rounded-full right-[40%] bottom-[-14%] md:right-[37.5%] md:bottom-[-14%]">
+                    </div>
                     <div class="pl-10 font-sans">
                         <h1 class="font-bold text-lg">Couple 20</h1>
                         <p class="font-normal text-xs text-slate-600">Coupon Code</p>
                     </div>
                 </div>
             </div>
+            <button
+                class="btn bg-white border-border_clr text-primary_clr mt-8 block m-auto mb-14 font-medium text-lg">See
+                All Offers</button>
         </div>
     </section>
     <!-- Best Offer Section End-->
+
+    <!-- P.H Paribahan section start -->
+    <section class="border-t-2 rounded-3xl border-border_clr bg-[#f7f8f8]">
+        <!-- Heading content -->
+        <div class="max-w-sm md:max-w-screen-md lg:max-w-screen-lg m-auto pt-12">
+            <div class="text-center w-[60%] m-auto">
+                <h1 class="text-xl font-bold mb-3">P.H Paribahan</h1>
+                <p class="text-sm text-slate-500 mb-5">Electronic ticketing systems can streamline the ticketing
+                    process, reducing the time spent waiting in lines or dealing with paper tickets.</p>
+            </div>
+        </div>
+        <!-- Bus route selection -->
+        <div class="max-w-sm md:max-w-screen-md lg:max-w-screen-lg m-auto pt-12">
+            <div class="flex justify-between rounded-xl items-center bg-white p-7 relative w-[100%]">
+                <div
+                    class="bg-[#f7f8f8] absolute p-6 rounded-full inset-x-[49%] top-[-15%] md:inset-x-[74.5%] md:top-[-15%] lg:inset-x-[76%]">
+                </div>
+                <div class="border-r-2 border-border_clr border-dashed pr-10 font-sans w-[80%]">
+                    <div class="flex justify-between">
+                        <div class="flex gap-3 items-center">
+                            <img class="w-10 h-8" src="./images/bus-logo.png" alt="bus_logo">
+                            <div class="flex flex-col">
+                                <h1>Greenline Paribahan</h1>
+                                <p>Coach-009-WEB ! AC_Business</p>
+                            </div>
+                        </div>
+                        <button class="btn bg-button_bg text-primary_clr flex items-center gap-2 pointer-events-none">
+                            <img class="w-4 h-4" src="./images/seat-green.png" alt="seat-green">
+                            <div><span>40</span> Seat left</div>
+                        </button>
+                    </div>
+                    <div class="flex flex-col gap-3 p-4 bg-[#f7f8f8] mt-5 rounded-2xl">
+                        <div class="flex justify-between">
+                            <h4>Route</h4>
+                            <h4 class="font-medium">Dhaka-Sylhet</h4>
+                        </div>
+                        <hr class="border-dashed">
+                        <div class="flex justify-between">
+                            <h4>Departure Time</h4>
+                            <h4 class="font-medium">9:00 PM</h4>
+                        </div>
+                        <hr class="border-dashed">
+                        <div class="flex justify-between mb-3 mt-3">
+
+                            <button class="btn pointer-events-none font-normal">Boarding Point - Laxmipur</button>
+                            <button class="btn pointer-events-none font-normal">Dropping Point - Bogura</button>
+                            <button class="btn pointer-events-none font-normal">Est. Time - 11 Hour</button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="bg-white absolute p-5 rounded-full inset-x-[49%] bottom-[-15%] md:inset-x-[54%] md:bottom-[-15%]">
+                </div>
+                <div class="font-serif flex flex-col justify-center items-center pr-10">
+                    <img class="w-6 h-6 mb-3" src="./images/fare.png" alt="fare">
+                    <h1 class="font-bold text-lg">550 Taka</h1>
+                    <p class="font-normal text-xs text-slate-600">Per Seat</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- P.H Paribahan section end -->
 
     <script src="" async defer></script>
 </body>
