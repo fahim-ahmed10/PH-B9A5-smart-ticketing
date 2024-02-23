@@ -158,7 +158,7 @@
         <div class="max-w-sm md:max-w-screen-md lg:max-w-screen-lg m-auto pt-12">
             <div class="flex justify-between rounded-xl items-center bg-white p-7 relative w-[100%]">
                 <div
-                    class="bg-[#f7f8f8] absolute p-6 rounded-full inset-x-[49%] top-[-15%] md:inset-x-[74.5%] md:top-[-15%] lg:inset-x-[76%] lg:top-[-9%]">
+                    class="bg-[#f7f8f8] absolute p-6 rounded-full inset-x-[49%] top-[-15%] md:inset-x-[74.5%] md:top-[-9%] lg:inset-x-[76%] lg:top-[-9%]">
                 </div>
                 <div class="border-r-2 border-border_clr border-dashed pr-10 font-sans w-[80%]">
                     <div class="flex justify-between">
@@ -187,14 +187,17 @@
                         <hr class="border-dashed">
                         <div class="flex justify-between mb-3 mt-3">
 
-                            <button class="btn pointer-events-none font-normal bg-[#e9e9e9]">Boarding Point - Laxmipur</button>
-                            <button class="btn pointer-events-none font-normal bg-[#e9e9e9]">Dropping Point - Bogura</button>
-                            <button class="btn pointer-events-none font-normal bg-[#e9e9e9]">Est. Time - 11 Hour</button>
+                            <button class="btn pointer-events-none font-normal bg-[#e9e9e9]">Boarding Point -
+                                Laxmipur</button>
+                            <button class="btn pointer-events-none font-normal bg-[#e9e9e9]">Dropping Point -
+                                Bogura</button>
+                            <button class="btn pointer-events-none font-normal bg-[#e9e9e9]">Est. Time - 11
+                                Hour</button>
                         </div>
                     </div>
                 </div>
                 <div
-                    class="bg-[#f7f8f8] absolute p-5 rounded-full inset-x-[49%] bottom-[-15%] md:inset-x-[54%] md:bottom-[-15%] lg:inset-x-[76.5%] lg:bottom-[-7%]">
+                    class="bg-[#f7f8f8] absolute p-5 rounded-full inset-x-[49%] bottom-[-15%] md:inset-x-[75.3%] md:bottom-[-6%] lg:inset-x-[76.5%] lg:bottom-[-7%]">
                 </div>
                 <div class="font-serif flex flex-col justify-center items-center pr-10">
                     <img class="w-6 h-6 mb-3" src="./images/fare.png" alt="fare">
@@ -202,29 +205,101 @@
                     <p class="font-normal text-xs text-slate-600">Per Seat</p>
                 </div>
             </div>
-            <div class="max-w-sm md:max-w-screen-md lg:max-w-screen-lg m-auto p-7 w-[100%] flex bg-white mt-6 rounded-xl">
-                <div class="border-r-2 border-[#f7f8f8] border-dashed pr-10 w-[60%] flex flex-col gap-4">
-                    <h1>Select Your Seat</h1>
+            <div
+                class="max-w-sm md:max-w-screen-md lg:max-w-screen-lg m-auto p-7 w-[100%] flex flex-col gap-6 md:flex-row lg:flex-row bg-white mt-6 rounded-xl">
+                <div class="border-none md:border-r-2 lg:border-r-2 border-[#d7d7d7] md:border-dashed lg:border-dashed md:pr-10 lg:pr-10 w-[100%] md:w-[60%] lg:w-[60%] flex flex-col gap-4">
+                    <h1 class="font-medium">Select Your Seat</h1>
                     <hr class="border-dashed">
                     <div class="flex justify-between">
                         <div class="flex gap-2 items-center">
                             <img class="h-4 w-4" src="./images/seat-gray.png" alt="seat-gray">
-                            <p>Available</p>
+                            <p class="text-slate-400">Available</p>
                         </div>
-                        <div class="flex gap-2 items-center ">
+                        <div class="flex gap-2 items-center font-medium">
                             <img class="w-4 h-4" src="./images/seat-green.png" alt="seat-green">
-                            <p>Selected</p>
+                            <p class="text-primary_clr">Selected</p>
                         </div>
                     </div>
                     <hr class="border-dashed">
                     <div class="flex justify-end">
-                        <button class="btn pointer-events-none bg-[#e9e9e9] px-8">
+                        <button class="btn pointer-events-none bg-[#d7d7d7] px-8">
                             <img class="w-4 h-4" src="./images/steering.png" alt="steering">
                         </button>
                     </div>
+                    <div class="grid grid-cols-5 items-center justify-items-center gap-8 lg:gap-6 ">
+                        <div><button class="pointer-events-none text-slate-500">A</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 text-slate-500">A1</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 mr-3 text-slate-500">A2</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 ml-3 text-slate-500">A3</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 text-slate-500">A4</button></div>
+                    </div>
+                    <div class="grid grid-cols-5 items-center justify-items-center gap-8 lg:gap-6">
+                        <div><button class="pointer-events-none text-slate-500">B</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 text-slate-500">B1</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 mr-3 text-slate-500">B2</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 ml-3 text-slate-500">B3</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 text-slate-500">B4</button></div>
+                    </div>
+                    <div class="grid grid-cols-5 items-center justify-items-center gap-8 lg:gap-6">
+                        <div><button class="pointer-events-none text-slate-500">C</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 text-slate-500">C1</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 mr-3 text-slate-500">C2</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 ml-3 text-slate-500">C3</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 text-slate-500">C4</button></div>
+                    </div>
+                    <div class="grid grid-cols-5 items-center justify-items-center gap-8 lg:gap-6">
+                        <div><button class="pointer-events-none text-slate-500">D</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 text-slate-500">D1</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 mr-3 text-slate-500">D2</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 ml-3 text-slate-500">D3</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 text-slate-500">D4</button></div>
+                    </div>
+                    <div class="grid grid-cols-5 items-center justify-items-center gap-8 lg:gap-6">
+                        <div><button class="pointer-events-none text-slate-500">E</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 text-slate-500">E1</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 mr-3 text-slate-500">E2</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 ml-3 text-slate-500">E3</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 text-slate-500">E4</button></div>
+                    </div>
+                    <div class="grid grid-cols-5 items-center justify-items-center gap-8 lg:gap-6">
+                        <div><button class="pointer-events-none text-slate-500">F</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 text-slate-500">F1</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 mr-3 text-slate-500">F2</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 ml-3 text-slate-500">F3</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 text-slate-500">F4</button></div>
+                    </div>
+                    <div class="grid grid-cols-5 items-center justify-items-center gap-8 lg:gap-6">
+                        <div><button class="pointer-events-none text-slate-500">G</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 text-slate-500">G1</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 mr-3 text-slate-500">G2</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 ml-3 text-slate-500">G3</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 text-slate-500">G4</button></div>
+                    </div>
+                    <div class="grid grid-cols-5 items-center justify-items-center gap-8 lg:gap-6">
+                        <div><button class="pointer-events-none text-slate-500">H</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 text-slate-500">H1</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 mr-3 text-slate-500">H2</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 ml-3 text-slate-500">H3</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 text-slate-500">H4</button></div>
+                    </div>
+                    <div class="grid grid-cols-5 items-center justify-items-center gap-8 lg:gap-6">
+                        <div><button class="pointer-events-none text-slate-500">I</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 text-slate-500">I1</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 mr-3 text-slate-500">I2</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 ml-3 text-slate-500">I3</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 text-slate-500">I4</button></div>
+                    </div>
+                    <div class="grid grid-cols-5 items-center justify-items-center gap-8 lg:gap-6">
+                        <div><button class="pointer-events-none text-slate-500">J</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 text-slate-500">J1</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 mr-3 text-slate-500">J2</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 ml-3 text-slate-500">J3</button></div>
+                        <div><button class="btn px-4 md:px-5 lg:px-8 text-slate-500">J4</button></div>
+                    </div>
                 </div>
-                <div class="w-[40%]">
-                    <h1>Select Your Seat</h1>
+                <div class="w-[100%] md:w-[40%] lg:w-[40%]">
+                    <h1 class="font-medium">Select Your Seat</h1>
+                    <hr class="border-dashed">
                 </div>
             </div>
         </div>
