@@ -26,11 +26,15 @@ function getClickedElement(clicked_id) {
     let getSelectedText = element.innerText;
     console.log(getSelectedText);
     let seat = document.getElementById("selectedSeat");
+    // let inputField = document.getElementById("phone");
     reduceOneAvailableSeat();
     increaseSelectedSeatCount();
-    if (seat.innerText <= 4) {
+    if (seat.innerText <= 4 || seat >= 1) {
       ticketReservation(getSelectedText);
       amountCalculationSum();
+      let nextBtn = document.getElementById("next");
+      nextBtn.classList.remove("pointer-events-none", "bg-slate-500");
+      nextBtn.classList.add("bg-primary_clr");
     } else {
       alert("You are not allowed to select more than four ticket.");
     }
@@ -112,10 +116,13 @@ function amountCalculationSum() {
   let price = convertToInt * 550;
   let totalPrice = document.getElementById("totalPrice");
   totalPrice.innerText = price;
-
+  //Grand total
+  let discountPrice = 0;
+  let grandTotal = price - discountPrice;
+  document.getElementById("grandTotal").innerText = grandTotal;
+  //discount price
   if (price === 2200) {
     let element2 = document.getElementById("discountBtn");
-    console.log(element2);
     element2.classList.remove("pointer-events-none", "bg-slate-500");
     element2.classList.add("bg-primary_clr");
 
@@ -136,8 +143,11 @@ function amountCalculationSum() {
         h2b.innerText = "BDT " + discountPrice;
         h2b.classList.add("font-normal");
         div.appendChild(h2b);
-      } 
-      else if (getValue === "Couple 20") {
+
+        //Grand total
+        let grandTotal = price - discountPrice;
+        document.getElementById("grandTotal").innerText = grandTotal;
+      } else if (getValue === "Couple 20") {
         discountPrice = 2200 * 0.2;
         let element3 = document.getElementById("totalWithDiscount");
         let div = document.createElement("div");
@@ -149,10 +159,16 @@ function amountCalculationSum() {
         div.appendChild(h2a);
         let h2b = document.createElement("h2");
         h2b.innerText = "BDT " + discountPrice;
+        //adding a unique id to the newly created element
+        let givingUniqueId = "dPrice";
+        h2b.id = givingUniqueId;
         h2b.classList.add("font-normal");
         div.appendChild(h2b);
-      } 
-      else {
+
+        //Grand total
+        let grandTotal = price - discountPrice;
+        document.getElementById("grandTotal").innerText = grandTotal;
+      } else {
         alert("Invalid Coupon");
       }
     });
@@ -168,7 +184,10 @@ function amountCalculationDiv() {
   let price = (4 - formula) * 550;
   let totalPrice = document.getElementById("totalPrice");
   totalPrice.innerText = price;
-}
 
-//coupon discount
-function discountCount() {}
+  //reduce discount price
+  if (totalSelectedSeat !== 4) {
+    let calc = 0;
+    document.getElementById("dPrice").innerText = calc;
+  }
+}
