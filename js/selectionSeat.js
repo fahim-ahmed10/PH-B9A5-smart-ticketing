@@ -14,8 +14,7 @@ function getClickedElement(clicked_id) {
       "text-white",
       "hover:bg-[#33e214]"
     );
-    let removeInnerText = (getInnerText = "");
-    console.log(removeInnerText + "removed");
+    getInnerText = "";
     increaseOneAvailableSeat();
     reduceSelectedSeatCount();
     let getSelectedText = element.innerText;
@@ -24,7 +23,6 @@ function getClickedElement(clicked_id) {
   } else {
     element.classList.add("bg-[#1dd100]", "text-white", "hover:bg-[#33e214]");
     let getSelectedText = element.innerText;
-    console.log(getSelectedText);
     let seat = document.getElementById("selectedSeat");
     // let inputField = document.getElementById("phone");
     reduceOneAvailableSeat();
@@ -49,8 +47,8 @@ function reduceOneAvailableSeat() {
   let getInnerText = findElement.innerText;
   let convertToInt = parseInt(getInnerText);
   let availableSeat = convertToInt - 1;
-  let showAvailableSeat = (seatLeft.innerText = availableSeat);
-  return showAvailableSeat;
+  findElement.innerText = availableSeat;
+  return findElement;
 }
 
 //Increasing availablility by removing one seat from select
@@ -59,8 +57,8 @@ function increaseOneAvailableSeat() {
   let getInnerText = findElement.innerText;
   let convertToInt = parseInt(getInnerText);
   let availableSeat = convertToInt + 1;
-  let showAvailableSeat = (seatLeft.innerText = availableSeat);
-  return showAvailableSeat;
+  findElement.innerText = availableSeat;
+  return findElement;
 }
 
 //Increasing selected seat by adding one seat from select
@@ -69,8 +67,8 @@ function increaseSelectedSeatCount() {
   let getInnerText = findElement.innerText;
   let convertToInt = parseInt(getInnerText);
   let seatAdded = convertToInt + 1;
-  let showAddedSeat = (findElement.innerText = seatAdded);
-  return showAddedSeat;
+  findElement.innerText = seatAdded;
+  return findElement;
 }
 
 //Reducing selected seat by removing one seat from select
@@ -79,8 +77,8 @@ function reduceSelectedSeatCount() {
   let getInnerText = findElement.innerText;
   let convertToInt = parseInt(getInnerText);
   let seatAdded = convertToInt - 1;
-  let showAddedSeat = (findElement.innerText = seatAdded);
-  return showAddedSeat;
+  findElement.innerText = seatAdded;
+  return findElement;
 }
 
 //adding ticket for reservation
@@ -118,19 +116,22 @@ function amountCalculationSum() {
   let price = convertToInt * 550;
   let totalPrice = document.getElementById("totalPrice");
   totalPrice.innerText = price;
-  //Grand total
+  //Grand total without discount price
   let discountPrice = 0;
   let grandTotal = price - discountPrice;
   document.getElementById("grandTotal").innerText = grandTotal;
-  //discount price
+  //discount price calculation including coupon
+  //if the price is 2200 (means 4 seat selected)
   if (price === 2200) {
+    //enabaling apply coupon button
     let element2 = document.getElementById("discountBtn");
     element2.classList.remove("pointer-events-none", "bg-slate-500");
     element2.classList.add("bg-primary_clr");
-
+    //discount price calculation
     element2.addEventListener("click", function () {
       let inputValue = document.getElementById("couponInputField");
       let getValue = inputValue.value;
+      //discount price calculation with coupon "NEW15"
       if (getValue === "NEW15") {
         discountPrice = 2200 * 0.15;
         let element3 = document.getElementById("totalWithDiscount");
@@ -143,13 +144,18 @@ function amountCalculationSum() {
         div.appendChild(h2a);
         let h2b = document.createElement("h2");
         h2b.innerText = "BDT " + discountPrice;
+        //adding a unique id to the newly created element
+        let givingUniqueId = "dPrice";
+        h2b.id = givingUniqueId;
         h2b.classList.add("font-normal");
         div.appendChild(h2b);
 
-        //Grand total
+        //Grand total calculation with discount price with the coupon "NEW15"
         let grandTotal = price - discountPrice;
         document.getElementById("grandTotal").innerText = grandTotal;
-      } else if (getValue === "Couple 20") {
+      }
+      //discount price calculation with coupon "Couple 20"
+      else if (getValue === "Couple 20") {
         discountPrice = 2200 * 0.2;
         let element3 = document.getElementById("totalWithDiscount");
         let div = document.createElement("div");
@@ -167,7 +173,7 @@ function amountCalculationSum() {
         h2b.classList.add("font-normal");
         div.appendChild(h2b);
 
-        //Grand total
+        //Grand total with discount price with the coupon "Couple 20"
         let grandTotal = price - discountPrice;
         document.getElementById("grandTotal").innerText = grandTotal;
       } else {
@@ -177,7 +183,7 @@ function amountCalculationSum() {
   }
 }
 
-//calculation amount divide
+//reducing total price and grand total price when unselected any seat
 function amountCalculationDiv() {
   let element = document.getElementById("selectedSeat");
   let totalSelectedSeat = element.innerText;
@@ -186,10 +192,18 @@ function amountCalculationDiv() {
   let price = (4 - formula) * 550;
   let totalPrice = document.getElementById("totalPrice");
   totalPrice.innerText = price;
+  let grandTotal = document.getElementById("grandTotal");
+  grandTotal.innerText = price;
 
   //reduce discount price
   if (totalSelectedSeat !== 4) {
     let calc = 0;
     document.getElementById("dPrice").innerText = calc;
+  }
+  if(price !== 2200){
+    //disabling apply coupon button
+    let element2 = document.getElementById("discountBtn");
+    element2.classList.remove("bg-primary_clr");
+    element2.classList.add("pointer-events-none", "bg-slate-500");
   }
 }
