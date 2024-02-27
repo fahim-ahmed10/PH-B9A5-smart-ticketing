@@ -35,6 +35,8 @@ function getClickedElement(clicked_id) {
       let nextBtn = document.getElementById("next");
       nextBtn.classList.remove("pointer-events-none", "bg-slate-500");
       nextBtn.classList.add("bg-primary_clr");
+      let nextPage = document.getElementById("nextPage");
+      nextPage.classList.remove("pointer-events-none");
     } else {
       alert("You are not allowed to select more than four ticket.");
     }
